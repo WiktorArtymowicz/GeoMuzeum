@@ -1,0 +1,49 @@
+﻿<Window x:Class="GeoMuzeum.View.Views.CatalogsUserControl.AddOrUpdateCatalogWindow.AddOrUpdateCatalogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:e="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:b="clr-namespace:GeoMuzeum.View.Behaviors"
+        xmlns:addorupdatecatalogwindow="clr-namespace:GeoMuzeum.View.Views.CatalogsUserControl.AddOrUpdateCatalogWindow"
+        d:DataContext="{d:DesignInstance Type=addorupdatecatalogwindow:AddOrUpdateCatalogViewModel}"
+        mc:Ignorable="d"
+        Title="AddOrUpdateCatalogView" Height="300" Width="500" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterScreen">
+
+    <e:Interaction.Behaviors>
+        <b:DragBehavior/>
+    </e:Interaction.Behaviors>
+
+    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="20" Padding="3" Background="#181918">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" BorderBrush="#FF8A0B" BorderThickness="1" CornerRadius="20" Padding="1" Margin="5">
+                <StackPanel Margin="5" Orientation="Vertical">
+                    <StackPanel Margin="5">
+                        <Label Content="Katalog:" Foreground="#FF8A0B"/>
+                        <TextBox Text="{Binding Path=CatalogName, UpdateSourceTrigger=PropertyChanged}" MaxLength="50"/>
+                    </StackPanel>
+                    <StackPanel Margin="5">
+                        <Label Content="Opis:" Foreground="#FF8A0B"/>
+                        <TextBox Text="{Binding Path=CatalogDescription, UpdateSourceTrigger=PropertyChanged}" MaxLength="200"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </Border>
+
+            <Border Grid.Row="1" BorderBrush="#FF8A0B" BorderThickness="1" CornerRadius="20" Padding="1" Margin="5">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Zapisz" Grid.Row="3" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=SaveCommand}" Margin="5,5,0,5" />
+                    <Button Content="Anuluj" Grid.Row="3" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=CloseCommand}" Margin="5" />
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Border>
+    
+</Window>

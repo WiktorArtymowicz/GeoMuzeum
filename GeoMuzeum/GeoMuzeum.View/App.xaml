@@ -1,0 +1,59 @@
+﻿<Application x:Class="GeoMuzeum.View.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:catalogsUserControl="clr-namespace:GeoMuzeum.View.Views.CatalogsUserControl"
+             xmlns:exhibitsUserControl="clr-namespace:GeoMuzeum.View.Views.ExhibitsUserControl"
+             xmlns:exhibitsLocalizationsUserControl="clr-namespace:GeoMuzeum.View.Views.ExhibitsLocalizationsUserControl"
+             xmlns:toolsUserControl="clr-namespace:GeoMuzeum.View.Views.ToolsUserControl"
+             xmlns:exhibitsStocktakingUserControl="clr-namespace:GeoMuzeum.View.Views.ExhibitsStocktakingUserControl"
+             xmlns:toolsLocalizationsUserControl="clr-namespace:GeoMuzeum.View.Views.ToolsLocalizationsUserControl"
+             xmlns:usersUserControl="clr-namespace:GeoMuzeum.View.Views.UsersUserControl"
+             xmlns:usersLogUserControl="clr-namespace:GeoMuzeum.View.Views.UsersLogUserControl"
+             xmlns:toolsStocktakingUserControl="clr-namespace:GeoMuzeum.View.Views.ToolsStocktakingUserControl"
+             Startup="Application_Startup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/MenuButtonResourceDictionary.xaml"/>
+                <ResourceDictionary Source="Themes/ButtonResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type catalogsUserControl:CatalogsUserControlViewModel}">
+                <catalogsUserControl:CatalogsUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type exhibitsUserControl:ExhibitsUserControlViewModel}">
+                <exhibitsUserControl:ExhibitsUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type exhibitsLocalizationsUserControl:ExhibitsLocalizationsUserControlViewModel}">
+                <exhibitsLocalizationsUserControl:ExhibitsLocalizationsUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type exhibitsStocktakingUserControl:ExhibitsStocktakingUserControlViewModel}">
+                <exhibitsStocktakingUserControl:ExhibitsStocktakingUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type toolsUserControl:ToolsUserControlViewModel}">
+                <toolsUserControl:ToolsUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type toolsLocalizationsUserControl:ToolsLocalizationsUserControlViewModel}">
+                <toolsLocalizationsUserControl:ToolsLocalizationsUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type usersUserControl:UsersUserControlViewModel}">
+                <usersUserControl:UsersUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type usersLogUserControl:UsersLogUserControlViewModel}">
+                <usersLogUserControl:UsersLogUserControlView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type toolsStocktakingUserControl:ToolsStocktakingUserControlViewModel}">
+                <toolsStocktakingUserControl:ToolsStocktakingUserControlView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

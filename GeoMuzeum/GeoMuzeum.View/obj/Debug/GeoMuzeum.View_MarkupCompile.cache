@@ -1,0 +1,20 @@
+﻿GeoMuzeum.View
+
+
+winexe
+C#
+.cs
+F:\Wiktor\praca inż\GeoMuzeum\GeoMuzeum\GeoMuzeum.View\obj\Debug\
+GeoMuzeum.View
+none
+false
+DEBUG;TRACE
+F:\Wiktor\praca inż\GeoMuzeum\GeoMuzeum\GeoMuzeum.View\App.xaml
+21-1420096695
+
+74-702592715
+301565988221
+Themes\ButtonResourceDictionary.xaml;Themes\MenuButtonResourceDictionary.xaml;Views\CatalogsUserControl\AddOrUpdateCatalogWindow\AddOrUpdateCatalogView.xaml;Views\CatalogsUserControl\CatalogsUserControlView.xaml;Views\ExhibitsLocalizationsUserControl\AddOrUpdateExhibitLocalization\AddOrUpdateExhibitLocalizationView.xaml;Views\ExhibitsLocalizationsUserControl\ExhibitsLocalizationsUserControlView.xaml;Views\ExhibitsStocktakingUserControl\AddOrUpdateExhibitStocktaking\AddOrUpdateExhibitStocktakingView.xaml;Views\ExhibitsStocktakingUserControl\ExhibitsStocktakingUserControlView.xaml;Views\ExhibitsUserControl\AddOrUpdateExhibit\AddOrUpdateExhibitView.xaml;Views\ExhibitsUserControl\ExhibitsUserControlView.xaml;Views\MainWindow\MuseumMainWindow.xaml;Views\ToolsLocalizationsUserControl\AddOrUpdateToolsLocalization\AddOrUpdateToolsLocalizationView.xaml;Views\ToolsLocalizationsUserControl\ToolsLocalizationsUserControlView.xaml;Views\ToolsStocktakingUserControl\AddOrUpdateToolStocktaking\AddOrUpdateToolsStocktakingView.xaml;Views\ToolsStocktakingUserControl\ToolsStocktakingUserControlView.xaml;Views\ToolsUserControl\AddOrUpdateTool\AddOrUpdateToolView.xaml;Views\ToolsUserControl\ToolsUserControlView.xaml;Views\LoginView\UserLoginView.xaml;Views\UsersLogUserControl\UsersLogUserControlView.xaml;Views\UsersUserControl\AddOrUpdateUser\AddOrUpdateUserView.xaml;Views\UsersUserControl\UsersUserControlView.xaml;
+
+True
+

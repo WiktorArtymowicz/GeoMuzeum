@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoMuzeum.Model", "..\GeoMuzeum.Model\GeoMuzeum.Model.csproj", "{8F2524E4-74AE-4896-804B-E1935A0E82BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoMuzeum.DataModel", "..\GeoMuzeum.DataModel\GeoMuzeum.DataModel.csproj", "{817189EE-C236-47DC-BA99-1BF83AE56F1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoMuzeum.View", "GeoMuzeum.View\GeoMuzeum.View.csproj", "{437DF26C-31F9-460A-A483-4D6C17244935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoMuzeum.DataService", "GeoMuzeum.DataService\GeoMuzeum.DataService.csproj", "{4D5120CF-0105-4922-B7E0-E0F890420E4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F2524E4-74AE-4896-804B-E1935A0E82BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2524E4-74AE-4896-804B-E1935A0E82BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2524E4-74AE-4896-804B-E1935A0E82BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2524E4-74AE-4896-804B-E1935A0E82BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817189EE-C236-47DC-BA99-1BF83AE56F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817189EE-C236-47DC-BA99-1BF83AE56F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817189EE-C236-47DC-BA99-1BF83AE56F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817189EE-C236-47DC-BA99-1BF83AE56F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{437DF26C-31F9-460A-A483-4D6C17244935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{437DF26C-31F9-460A-A483-4D6C17244935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{437DF26C-31F9-460A-A483-4D6C17244935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{437DF26C-31F9-460A-A483-4D6C17244935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5120CF-0105-4922-B7E0-E0F890420E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5120CF-0105-4922-B7E0-E0F890420E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5120CF-0105-4922-B7E0-E0F890420E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5120CF-0105-4922-B7E0-E0F890420E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6153649-BEA1-4CFB-A134-CC224017E611}
+	EndGlobalSection
+EndGlobal

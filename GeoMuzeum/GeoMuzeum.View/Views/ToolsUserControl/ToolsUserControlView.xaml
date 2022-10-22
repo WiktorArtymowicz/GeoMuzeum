@@ -1,0 +1,104 @@
+﻿<UserControl x:Class="GeoMuzeum.View.Views.ToolsUserControl.ToolsUserControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:GeoMuzeum.View.Views.ToolsUserControl"
+             d:DataContext="{d:DesignInstance Type=local:ToolsUserControlViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="270"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="5" Background="#181918">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <ListView x:Name="ToolsListView" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Margin="5" Background="#181918" ItemsSource="{Binding Path=Tools, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=SelectedTool, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#FF8A0B" BorderThickness="1" CornerRadius="20" Padding="3">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                    <Label Content="Narzędzie: " FontWeight="Bold" Foreground="White"/>
+                                    <Label Content="{Binding Path=ToolName}" Foreground="#FAE1C5"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                    <Label Content="Opis: " FontWeight="Bold" Foreground="White"/>
+                                    <Label Content="{Binding Path=ToolDescription}" Foreground="#FAE1C5"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="0" Grid.Column="1"  Orientation="Horizontal">
+                                    <Label Content="Lokalizacja: " FontWeight="Bold" Foreground="White"/>
+                                    <Label Content="{Binding Path=Localization.ToolLocalizationNumber}" Foreground="#FAE1C5"/>
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Narzędzia" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" Foreground="#FF8A0B" />
+
+        <Grid Margin="5" Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <Label Content="Wyszukaj po:" Foreground="#FF8A0B"/>
+                <ComboBox ItemsSource="{Binding Path=ToolSearchTypes}" SelectedItem="{Binding Path=SelectedToolSearchType}" />
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Label Content="Wyszukaj:" Foreground="#FF8A0B"/>
+                <TextBox Text="{Binding Path=SearchText, UpdateSourceTrigger=PropertyChanged}" MaxLength="10"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Margin="0,10,0,10">
+                <Label Content="Sortuj po:" Foreground="#FF8A0B"/>
+                <ComboBox ItemsSource="{Binding Path=ToolSortTypes}" SelectedItem="{Binding Path=SelectedToolSortType}" />
+            </StackPanel>
+
+            <Button Content="Dodaj narzędzie" Grid.Row="3" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=AddToolCommand}"  Margin="0,0,0,5"/>
+
+            <Button Content="Edytuj narzędzie" Grid.Row="4" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=UpdateToolCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Usuń narzędzie" Grid.Row="5" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=DeleteToolCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Odśwież" Grid.Row="7" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=RefreschCommand}" Margin="0,0,0,5"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

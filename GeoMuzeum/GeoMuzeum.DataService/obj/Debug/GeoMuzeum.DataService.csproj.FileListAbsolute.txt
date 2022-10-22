@@ -1,0 +1,17 @@
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.DataService.dll.config
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.DataService.dll
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.DataService.pdb
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\EntityFramework.dll
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.DataModel.dll
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.Model.dll
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.DataModel.pdb
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.DataModel.dll.config
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\GeoMuzeum.Model.pdb
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\EntityFramework.xml
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\obj\Debug\GeoMuzeum.DataService.csproj.AssemblyReference.cache
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\obj\Debug\GeoMuzeum.DataService.csproj.CoreCompileInputs.cache
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\obj\Debug\GeoMuzeum.DataService.csproj.CopyComplete
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\obj\Debug\GeoMuzeum.DataService.dll
+D:\Projekty\GeoMuzeum\GeoMuzeum.DataService\obj\Debug\GeoMuzeum.DataService.pdb

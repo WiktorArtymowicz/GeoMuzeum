@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="GeoMuzeum.View.Views.ExhibitsStocktakingUserControl.ExhibitsStocktakingUserControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GeoMuzeum.View.Views.ExhibitsStocktakingUserControl" d:DataContext="{d:DesignInstance Type=local:ExhibitsStocktakingUserControlViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="270"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="5" Background="#181918">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <ListView x:Name="ExhibitStocktakingListView" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Margin="5" Background="#181918" ItemsSource="{Binding Path=ExhibitStocktackings, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=SelectedExhibitStocktaking, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#FF8A0B" BorderThickness="1" CornerRadius="20" Padding="3">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                    <Label Content="Eksponat: " FontWeight="Bold" Foreground="White"/>
+                                    <Label Content="{Binding Path=Exhibit.ExhibitName}" Foreground="#FAE1C5"/>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                                    <Label Content="Katalog: " FontWeight="Bold" Foreground="White"/>
+                                    <Label Content="{Binding Path=Catalog.CatalogName}" Foreground="#FAE1C5"/>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Row="1" Grid.Column="1"  Orientation="Horizontal">
+                                    <Label Content="Lokalizacja: " FontWeight="Bold" Foreground="White"/>
+                                    <Label Content="{Binding Path=Localization.ExhibitLocalizationNumber}" Foreground="#FAE1C5"/>
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Remanent eksponatów" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" Foreground="#FF8A0B" />
+
+        <Grid Margin="5" Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <Label Content="Wyszukaj po:" Foreground="#FF8A0B"/>
+                <ComboBox ItemsSource="{Binding Path=ExhibitStocktakingSearchTypes, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=SelectedExhibitStocktakingSearchType, UpdateSourceTrigger=PropertyChanged}" >
+                    <ComboBox.Style>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=IsExhibitStocktakingActive, UpdateSourceTrigger=PropertyChanged}" Value="True">
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ComboBox.Style>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Label Content="Wyszukaj:" Foreground="#FF8A0B"/>
+                <TextBox Text="{Binding Path=SearchText, UpdateSourceTrigger=PropertyChanged}" MaxLength="10">
+                    <TextBox.Style>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=IsExhibitStocktakingActive, UpdateSourceTrigger=PropertyChanged}" Value="True">
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Margin="0,10,0,10">
+                <Label Content="Sortuj po:" Foreground="#FF8A0B"/>
+                <ComboBox ItemsSource="{Binding Path=ExhibitStocktakingSortTypes, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=SelectedExhibitStocktakingSortType, UpdateSourceTrigger=PropertyChanged}" >
+                    <ComboBox.Style>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=IsExhibitStocktakingActive, UpdateSourceTrigger=PropertyChanged}" Value="True">
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ComboBox.Style>
+                </ComboBox>
+            </StackPanel>
+
+            <Button Content="Rozpocznij remanent" Grid.Row="3" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=StartStocktakingCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Anuluj remanent" Grid.Row="4" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=CancelStocktakingCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Zapisz remanent" Grid.Row="5" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=ConfirmStocktakingCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Dodaj pozycje" Grid.Row="6" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=AddStocktakingPositionCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Edytuj pozycje" Grid.Row="7" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=UpdateStocktakingPositionCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Usuń pozycje" Grid.Row="8" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=DeleteStocktakingPositionCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Odśwież" Grid.Row="9" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=RefreschCommand}" Margin="0,0,0,5"/>
+
+            <Button Content="Wydruk" Grid.Row="10" Style="{StaticResource MenuButtonTheme}" Command="{Binding Path=PrintCommand}" Margin="0,0,0,5"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

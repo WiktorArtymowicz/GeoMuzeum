@@ -1,0 +1,6 @@
+D:\Projekty\GeoMuzeum.Model\bin\Debug\GeoMuzeum.Model.dll
+D:\Projekty\GeoMuzeum.Model\bin\Debug\GeoMuzeum.Model.pdb
+D:\Projekty\GeoMuzeum.Model\obj\Debug\GeoMuzeum.Model.csproj.CoreCompileInputs.cache
+D:\Projekty\GeoMuzeum.Model\obj\Debug\GeoMuzeum.Model.dll
+D:\Projekty\GeoMuzeum.Model\obj\Debug\GeoMuzeum.Model.pdb
+D:\Projekty\GeoMuzeum.Model\obj\Debug\GeoMuzeum.Model.csproj.AssemblyReference.cache

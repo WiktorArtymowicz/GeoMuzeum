@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{437DF26C-31F9-460A-A483-4D6C17244935}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GeoMuzeum.View</RootNamespace>
+    <AssemblyName>GeoMuzeum.View</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=6.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.6.3.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\DragBehavior.cs" />
+    <Compile Include="Enums\EditStatusType.cs" />
+    <Compile Include="Enums\ViewModelType.cs" />
+    <Compile Include="ProjectHelpers\CustomCommand.cs" />
+    <Compile Include="ProjectHelpers\ExtensionMethods.cs" />
+    <Compile Include="ProjectHelpers\GeneratePin.cs" />
+    <Compile Include="ProjectHelpers\PasswordBoxAssistant.cs" />
+    <Compile Include="ViewServices\BaseViewModel.cs" />
+    <Compile Include="ViewServices\IViewDialogService.cs">
+      <DependentUpon>ViewDialogService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewServices\PrintService.cs" />
+    <Compile Include="ViewServices\ViewDialogService.cs" />
+    <Compile Include="ViewServices\ViewMessenger.cs" />
+    <Compile Include="ViewServices\ViewModelLocator.cs" />
+    <Compile Include="Views\CatalogsUserControl\AddOrUpdateCatalogWindow\AddOrUpdateCatalogView.xaml.cs">
+      <DependentUpon>AddOrUpdateCatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CatalogsUserControl\AddOrUpdateCatalogWindow\AddOrUpdateCatalogViewModel.cs">
+      <DependentUpon>AddOrUpdateCatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CatalogsUserControl\CatalogSearchType.cs">
+      <DependentUpon>CatalogsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CatalogsUserControl\CatalogSortType.cs">
+      <DependentUpon>CatalogsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CatalogsUserControl\CatalogsUserControlView.xaml.cs">
+      <DependentUpon>CatalogsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CatalogsUserControl\CatalogsUserControlViewModel.cs">
+      <DependentUpon>CatalogsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsLocalizationsUserControl\AddOrUpdateExhibitLocalization\AddOrUpdateExhibitLocalizationView.xaml.cs">
+      <DependentUpon>AddOrUpdateExhibitLocalizationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsLocalizationsUserControl\AddOrUpdateExhibitLocalization\AddOrUpdateExhibitLocalizationViewModel.cs">
+      <DependentUpon>AddOrUpdateExhibitLocalizationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsLocalizationsUserControl\ExhibitLocalizationSearchType.cs">
+      <DependentUpon>ExhibitsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsLocalizationsUserControl\ExhibitLocalizationSortType.cs">
+      <DependentUpon>ExhibitsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsLocalizationsUserControl\ExhibitsLocalizationsUserControlView.xaml.cs">
+      <DependentUpon>ExhibitsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsLocalizationsUserControl\ExhibitsLocalizationsUserControlViewModel.cs">
+      <DependentUpon>ExhibitsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsStocktakingUserControl\AddOrUpdateExhibitStocktaking\AddOrUpdateExhibitStocktakingView.xaml.cs">
+      <DependentUpon>AddOrUpdateExhibitStocktakingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsStocktakingUserControl\AddOrUpdateExhibitStocktaking\AddOrUpdateExhibitStocktakingViewModel.cs">
+      <DependentUpon>AddOrUpdateExhibitStocktakingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsStocktakingUserControl\ExhibitsStocktakingUserControlView.xaml.cs">
+      <DependentUpon>ExhibitsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsStocktakingUserControl\ExhibitsStocktakingUserControlViewModel.cs">
+      <DependentUpon>ExhibitsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsStocktakingUserControl\ExhibitStocktakingSearchType.cs">
+      <DependentUpon>ExhibitsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsStocktakingUserControl\ExhibitStocktakingSortType.cs">
+      <DependentUpon>ExhibitsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsUserControl\AddOrUpdateExhibit\AddOrUpdateExhibitView.xaml.cs">
+      <DependentUpon>AddOrUpdateExhibitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsUserControl\AddOrUpdateExhibit\AddOrUpdateExhibitViewModel.cs">
+      <DependentUpon>AddOrUpdateExhibitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsUserControl\ExhibitSearchType.cs">
+      <DependentUpon>ExhibitsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsUserControl\ExhibitSortType.cs">
+      <DependentUpon>ExhibitsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsUserControl\ExhibitsUserControlView.xaml.cs">
+      <DependentUpon>ExhibitsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExhibitsUserControl\ExhibitsUserControlViewModel.cs">
+      <DependentUpon>ExhibitsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow\MuseumMainWindow.xaml.cs">
+      <DependentUpon>MuseumMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow\MuseumMainWindowViewModel.cs">
+      <DependentUpon>MuseumMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsLocalizationsUserControl\AddOrUpdateToolsLocalization\AddOrUpdateToolsLocalizationView.xaml.cs">
+      <DependentUpon>AddOrUpdateToolsLocalizationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsLocalizationsUserControl\AddOrUpdateToolsLocalization\AddOrUpdateToolsLocalizationViewModel.cs">
+      <DependentUpon>AddOrUpdateToolsLocalizationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsLocalizationsUserControl\ToolLocalizationSearchType.cs">
+      <DependentUpon>ToolsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsLocalizationsUserControl\ToolLocalizationSortType.cs">
+      <DependentUpon>ToolsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsLocalizationsUserControl\ToolsLocalizationsUserControlView.xaml.cs">
+      <DependentUpon>ToolsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsLocalizationsUserControl\ToolsLocalizationsUserControlViewModel.cs">
+      <DependentUpon>ToolsLocalizationsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsStocktakingUserControl\AddOrUpdateToolStocktaking\AddOrUpdateToolsStocktakingView.xaml.cs">
+      <DependentUpon>AddOrUpdateToolsStocktakingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsStocktakingUserControl\AddOrUpdateToolStocktaking\AddOrUpdateToolsStocktakingViewModel.cs">
+      <DependentUpon>AddOrUpdateToolsStocktakingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsStocktakingUserControl\ToolsStocktakingUserControlView.xaml.cs">
+      <DependentUpon>ToolsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsStocktakingUserControl\ToolsStocktakingUserControlViewModel.cs">
+      <DependentUpon>ToolsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsStocktakingUserControl\ToolStocktakingSearchType.cs">
+      <DependentUpon>ToolsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsStocktakingUserControl\ToolStocktakingSortType.cs">
+      <DependentUpon>ToolsStocktakingUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsUserControl\AddOrUpdateTool\AddOrUpdateToolView.xaml.cs">
+      <DependentUpon>AddOrUpdateToolView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsUserControl\AddOrUpdateTool\AddOrUpdateToolViewModel.cs">
+      <DependentUpon>AddOrUpdateToolView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsUserControl\ToolSearchType.cs">
+      <DependentUpon>ToolsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsUserControl\ToolSortType.cs">
+      <DependentUpon>ToolsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsUserControl\ToolsUserControlView.xaml.cs">
+      <DependentUpon>ToolsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ToolsUserControl\ToolsUserControlViewModel.cs">
+      <DependentUpon>ToolsUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView\UserLoginView.xaml.cs">
+      <DependentUpon>UserLoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView\UserLoginViewModel.cs">
+      <DependentUpon>UserLoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersLogUserControl\UsersLogSearchType.cs">
+      <DependentUpon>UsersLogUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersLogUserControl\UsersLogSortType.cs">
+      <DependentUpon>UsersLogUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersLogUserControl\UsersLogUserControlView.xaml.cs">
+      <DependentUpon>UsersLogUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersLogUserControl\UsersLogUserControlViewModel.cs">
+      <DependentUpon>UsersLogUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersUserControl\AddOrUpdateUser\AddOrUpdateUserView.xaml.cs">
+      <DependentUpon>AddOrUpdateUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersUserControl\AddOrUpdateUser\AddOrUpdateUserViewModel.cs">
+      <DependentUpon>AddOrUpdateUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersUserControl\UserSearchType.cs">
+      <DependentUpon>UsersUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersUserControl\UserSortType.cs">
+      <DependentUpon>UsersUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersUserControl\UsersUserControlView.xaml.cs">
+      <DependentUpon>UsersUserControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersUserControl\UsersUserControlViewModel.cs">
+      <DependentUpon>UsersUserControlView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\GeoMuzeum.Model\GeoMuzeum.Model.csproj">
+      <Project>{8F2524E4-74AE-4896-804B-E1935A0E82BB}</Project>
+      <Name>GeoMuzeum.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoMuzeum.DataService\GeoMuzeum.DataService.csproj">
+      <Project>{4D5120CF-0105-4922-B7E0-E0F890420E4F}</Project>
+      <Name>GeoMuzeum.DataService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\ButtonResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MenuButtonResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CatalogsUserControl\AddOrUpdateCatalogWindow\AddOrUpdateCatalogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CatalogsUserControl\CatalogsUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExhibitsLocalizationsUserControl\AddOrUpdateExhibitLocalization\AddOrUpdateExhibitLocalizationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExhibitsLocalizationsUserControl\ExhibitsLocalizationsUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExhibitsStocktakingUserControl\AddOrUpdateExhibitStocktaking\AddOrUpdateExhibitStocktakingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExhibitsStocktakingUserControl\ExhibitsStocktakingUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExhibitsUserControl\AddOrUpdateExhibit\AddOrUpdateExhibitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExhibitsUserControl\ExhibitsUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow\MuseumMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToolsLocalizationsUserControl\AddOrUpdateToolsLocalization\AddOrUpdateToolsLocalizationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToolsLocalizationsUserControl\ToolsLocalizationsUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToolsStocktakingUserControl\AddOrUpdateToolStocktaking\AddOrUpdateToolsStocktakingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToolsStocktakingUserControl\ToolsStocktakingUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToolsUserControl\AddOrUpdateTool\AddOrUpdateToolView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ToolsUserControl\ToolsUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView\UserLoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UsersLogUserControl\UsersLogUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UsersUserControl\AddOrUpdateUser\AddOrUpdateUserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UsersUserControl\UsersUserControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

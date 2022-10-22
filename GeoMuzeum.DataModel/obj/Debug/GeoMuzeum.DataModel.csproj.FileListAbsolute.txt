@@ -1,0 +1,16 @@
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\GeoMuzeum.DataModel.dll.config
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\GeoMuzeum.DataModel.dll
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\GeoMuzeum.DataModel.pdb
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\EntityFramework.dll
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\GeoMuzeum.Model.dll
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\GeoMuzeum.Model.pdb
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\EntityFramework.xml
+D:\Projekty\GeoMuzeum.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projekty\GeoMuzeum.DataModel\obj\Debug\GeoMuzeum.DataModel.csproj.AssemblyReference.cache
+D:\Projekty\GeoMuzeum.DataModel\obj\Debug\GeoMuzeum.DataModel.csproj.CoreCompileInputs.cache
+D:\Projekty\GeoMuzeum.DataModel\obj\Debug\GeoMuzeum.DataModel.csproj.CopyComplete
+D:\Projekty\GeoMuzeum.DataModel\obj\Debug\GeoMuzeum.DataModel.dll
+D:\Projekty\GeoMuzeum.DataModel\obj\Debug\GeoMuzeum.DataModel.pdb
+D:\Projekty\GeoMuzeum.DataModel\obj\Debug\GeoMuzeum.DataModel.Migrations.First.resources
+D:\Projekty\GeoMuzeum.DataModel\obj\Debug\GeoMuzeum.DataModel.csproj.GenerateResource.cache
